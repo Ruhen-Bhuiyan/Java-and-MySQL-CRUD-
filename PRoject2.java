@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 import net.proteanit.sql.DbUtils;
@@ -53,7 +54,6 @@ public class PRoject2 {
 	      e.printStackTrace();
 	   } 
 	     }
-
 	/**
 	 * Create the application.
 	 */
@@ -62,7 +62,6 @@ public class PRoject2 {
 		Connect();
 		table_load();
 	}
-
 Connection con;
  PreparedStatement pst;
  ResultSet rs;
