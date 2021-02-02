@@ -2,6 +2,7 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
+
 -- Host: 127.0.0.1
 -- Generation Time: Jan 25, 2021 at 11:18 PM
 -- Server version: 10.4.17-MariaDB
@@ -14,6 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 --
+
 -- Database: `patient`
 --
 -- --------------------------------------------------------
@@ -29,11 +31,13 @@ CREATE TABLE `patient_table` (
 --
 -- Dumping data for table `patient_table`
 --
+
 INSERT INTO `patient_table` (`id`, `vaccines`, `age`, `name`) VALUES
 (4, '2', '2', 'l'),
 (5, '2', '40', 'her'),
 (7, '5', '5', 'k');
 --
+
 -- Indexes for dumped tables
 --
 --
@@ -47,6 +51,7 @@ ALTER TABLE `patient_table`
 --
 -- AUTO_INCREMENT for table `patient_table`
 --
+
 ALTER TABLE `patient_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
