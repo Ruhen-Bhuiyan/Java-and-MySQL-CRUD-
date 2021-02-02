@@ -1,5 +1,6 @@
 package project2;
 import java.sql.*;
+
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,12 +16,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
+
 import javax.swing.JScrollPane;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.Font;
 public class PRoject2 {
 	private JFrame frame;
+	
 	private JTextField txtpname;
 	private JTextField txtvaccines;
 	private JTextField txtage;
@@ -78,6 +81,7 @@ Connection con;
         catch (ClassNotFoundException ex) 
         {
           ex.printStackTrace();
+		
         }
         catch (SQLException ex) 
         {
@@ -94,6 +98,7 @@ Connection con;
 		frame.setBounds(100, 100, 450, 381);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);	
+		
 		JPanel panel = new JPanel();
 		
 		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Regis", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -122,6 +127,7 @@ Connection con;
 		txtvaccines.setBounds(100, 49, 86, 20);
 		panel.add(txtvaccines);
 		txtvaccines.setColumns(10);
+		
 		txtage = new JTextField();
 		txtage.setForeground(Color.RED);
 		txtage.setBounds(100, 69, 86, 20);
@@ -141,6 +147,7 @@ Connection con;
 				 pst.setString(1, bname);
 				 pst.setString(2, vac);
 				 pst.setString(3, agee);
+					 
 				 pst.executeUpdate();
 				 JOptionPane.showMessageDialog(null, "Record is inserted.");
 				 table_load();
@@ -168,6 +175,7 @@ Connection con;
 				txtpname.setText("");
 				 txtvaccines.setText("");
 				 txtage.setText("");
+				
 				 txtpname.requestFocus();
 			}
 		});
@@ -188,6 +196,7 @@ Connection con;
 		frame.getContentPane().add(scrollPane);
 		table = new JTable();
 		scrollPane.setViewportView(table);
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new TitledBorder(null, "Search", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_1.setBounds(32, 252, 190, 57);
@@ -214,6 +223,7 @@ try {
                  txtpname.setText(name);
                  txtvaccines.setText(vac);
                  txtage.setText(agee);              
+		     
              }   
              else
              {
@@ -264,6 +274,7 @@ try {
 		JButton btnDelete = new JButton("Delete");
 		
 		btnDelete.setForeground(Color.RED);
+		
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String pid;
@@ -312,10 +323,12 @@ try {
                  pst = con.prepareStatement("select id,vaccines,age from patient_table where name = ?");
                  pst.setString(1, name);
                  ResultSet rs = pst.executeQuery();
+	
              if(rs.next()==true)
              {
 		     
                  String id = rs.getString(1);
+		     
                  String vac = rs.getString(2);
                  String agee = rs.getString(3);
                  txtpname.setText(id);
