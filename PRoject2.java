@@ -1,6 +1,5 @@
 package project2;
 import java.sql.*;
-
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -47,6 +46,7 @@ public class PRoject2 {
 	  public void table_load()
 	     {
 	      try 
+		      
 	      {
 	     pst = con.prepareStatement("select * from patient_table");
 	     rs = pst.executeQuery();
@@ -76,6 +76,7 @@ Connection con;
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
+		
             con = DriverManager.getConnection("jdbc:mysql://localhost/patient", "root","");
         }
         catch (ClassNotFoundException ex) 
