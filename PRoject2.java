@@ -6,24 +6,20 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-
 import net.proteanit.sql.DbUtils;
 import javax.swing.border.EtchedBorder;
-
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
-
 import javax.swing.JScrollPane;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.Font;
 public class PRoject2 {
-	private JFrame frame;
-	
+	private JFrame frame;	
 	private JTextField txtpname;
 	private JTextField txtvaccines;
 	private JTextField txtage;
