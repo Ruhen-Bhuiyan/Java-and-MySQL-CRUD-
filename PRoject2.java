@@ -28,6 +28,7 @@ public class PRoject2 {
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -40,6 +41,7 @@ public class PRoject2 {
 			}
 		});
 	}
+	
 	  public void table_load()
 	     {
 	      try 
@@ -63,6 +65,7 @@ public class PRoject2 {
 		Connect();
 		table_load();
 	}
+	
 Connection con;
  PreparedStatement pst;
  ResultSet rs;
