@@ -27,8 +27,7 @@ public class PRoject2 {
 	private JTextField txtpid;
 	/**
 	 * Launch the application.
-	 */
-	
+	 */	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -40,8 +39,7 @@ public class PRoject2 {
 				}
 			}
 		});
-	}
-	
+	}	
 	  public void table_load()
 	     {
 	      try 
@@ -65,7 +63,6 @@ public class PRoject2 {
 		Connect();
 		table_load();
 	}
-	
 Connection con;
  PreparedStatement pst;
  ResultSet rs;
@@ -89,8 +86,7 @@ Connection con;
         	   ex.printStackTrace();
         }
 
-    }	
-	
+    }		
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -99,9 +95,7 @@ Connection con;
 		frame.setBounds(100, 100, 450, 381);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);	
-		
-		JPanel panel = new JPanel();
-		
+		JPanel panel = new JPanel();		
 		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Regis", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel.setBounds(10, 58, 209, 135);
 		frame.getContentPane().add(panel);
@@ -114,28 +108,24 @@ Connection con;
 		lblNewLabel_1_1.setForeground(Color.BLUE);
 		lblNewLabel_1_1.setBounds(10, 52, 70, 14);
 		panel.add(lblNewLabel_1_1);
-		JLabel lblNewLabel_1_2 = new JLabel("Age");
-		
+		JLabel lblNewLabel_1_2 = new JLabel("Age");		
 		lblNewLabel_1_2.setForeground(Color.RED);
 		lblNewLabel_1_2.setBounds(10, 72, 46, 14);
 		panel.add(lblNewLabel_1_2);
 		txtpname = new JTextField();
 		txtpname.setBounds(100, 24, 86, 20);
-		panel.add(txtpname);
-		
+		panel.add(txtpname);	
 		txtpname.setColumns(10);
 		txtvaccines = new JTextField();
 		txtvaccines.setBounds(100, 49, 86, 20);
 		panel.add(txtvaccines);
-		txtvaccines.setColumns(10);
-		
+		txtvaccines.setColumns(10);	
 		txtage = new JTextField();
 		txtage.setForeground(Color.RED);
 		txtage.setBounds(100, 69, 86, 20);
 		panel.add(txtage);
 		txtage.setColumns(10);
 		JButton btnNewButton = new JButton("Save");
-		
 		btnNewButton.setForeground(Color.RED);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -156,13 +146,10 @@ Connection con;
 				 txtpname.setText("");
 				 txtvaccines.setText("");
 				 txtage.setText("");
-				 txtpname.requestFocus();
-					 
+				 txtpname.requestFocus();	 
 				    }
-				 
 				 catch (SQLException e1) 
 				        {
-				 
 				 e1.printStackTrace();
 				 }	
 			}
@@ -176,7 +163,6 @@ Connection con;
 				txtpname.setText("");
 				 txtvaccines.setText("");
 				 txtage.setText("");
-				
 				 txtpname.requestFocus();
 			}
 		});
@@ -197,13 +183,11 @@ Connection con;
 		frame.getContentPane().add(scrollPane);
 		table = new JTable();
 		scrollPane.setViewportView(table);
-		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new TitledBorder(null, "Search", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel_1.setBounds(32, 252, 190, 57);
 		frame.getContentPane().add(panel_1);
 		JLabel lblNewLabel_1_1_1 = new JLabel("Id");
-		
 		lblNewLabel_1_1_1.setForeground(Color.RED);
 		panel_1.add(lblNewLabel_1_1_1);
 		txtpid = new JTextField();
@@ -211,7 +195,6 @@ Connection con;
 			@Override
 			public void keyReleased(KeyEvent e) {
 try {
-           
              String id = txtpid.getText();
                  pst = con.prepareStatement("select name,vaccines,age from patient_table where id = ?");
                  pst.setString(1, id);
@@ -223,8 +206,7 @@ try {
                  String agee = rs.getString(3);
                  txtpname.setText(name);
                  txtvaccines.setText(vac);
-                 txtage.setText(agee);              
-		     
+                 txtage.setText(agee);                   
              }   
              else
              {
