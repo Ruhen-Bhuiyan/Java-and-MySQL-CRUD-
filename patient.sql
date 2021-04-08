@@ -25,6 +25,7 @@ CREATE TABLE `patient_table` (
   `id` int(11) NOT NULL,
   `vaccines` varchar(255) NOT NULL,
   `age` varchar(255) NOT NULL,
+  
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
