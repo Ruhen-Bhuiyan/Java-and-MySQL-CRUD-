@@ -213,6 +213,7 @@ try {
 		     
               txtpname.setText("");
               txtvaccines.setText("");
+		     
                  txtage.setText("");
              }
          } 
