@@ -17,7 +17,6 @@ import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
 import java.awt.Font;
 public class PRoject2 {
 	private JFrame frame;	
