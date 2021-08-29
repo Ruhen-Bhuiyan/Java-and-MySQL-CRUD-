@@ -51,8 +51,7 @@ public class PRoject2 {
 	 } 
 	      catch (SQLException e) 
 	      {
-	      e.printStackTrace();
-		      
+	      e.printStackTrace();	      
 	   } 
 	     }
 	/**
